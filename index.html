@@ -90,6 +90,33 @@
       color: #fff;
       z-index: 1;
     }
+      /* 🔴🔴 จัดกลุ่มรูปวงกลมให้อยู่ข้างๆ กัน */
+    .profile-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px; /* ระยะห่างระหว่าง 2 วงกลม */
+      margin-bottom: 15px;
+    }
+     /* 💖 วงกลมหัวใจอันใหม่ */
+    .heart-circle {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+      transition: all 0.3s ease;
+    }
+    /* เอฟเฟกต์หัวใจเต้นดุกดิก */
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
 
     /* รูปโปรไฟล์ */
     .avatar-wrapper {
@@ -201,11 +228,7 @@
     
     <div class="avatar-wrapper">
       <img class="avatar" src="https://cdn.phototourl.com/free/2026-07-26-d4784f81-25fd-4c06-b7b0-5e70cfc797ad.jpg" alt="Profile Avatar">
-       <div class="circle-heart">https://www.instagram.com/ch__in2554?igsh=NWViaGFta3plbXNq
-    <span class="heart-icon">♥</span>
-</div>
-<img class="avatar" src="https://cdn.phototourl.com/free/2026-07-26-d4784f81-25fd-4c06-b7b0-5e70cfc797ad.jpg" alt="Profile Avatar=>
-
+       
 
 
       
