@@ -14,6 +14,10 @@
       box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+    #timer{
+    font-size:40px;
+    font-weight:bold;
+    }
 
     body {
       min-height: 100vh;
@@ -239,6 +243,35 @@
 <h4>สถานะปัจุบัน</h4><br>
       <p>คบหากับ ชิน รักชินที่สุดในโลก</p>
     <div class="social-links">
+      <div id="timer">
+    2578 ชั่วโมง 55 นาที 00 วินาที
+</div>
+
+<script>
+let hours = 2578;
+let minutes = 55;
+let seconds = 0;
+
+function updateTimer(){
+    seconds++;
+
+    if(seconds >= 60){
+        seconds = 0;
+        minutes++;
+    }
+
+    if(minutes >= 60){
+        minutes = 0;
+        hours++;
+    }
+
+    document.getElementById("timer").innerHTML =
+        `${hours} ชั่วโมง ${String(minutes).padStart(2,"0")} นาที ${String(seconds).padStart(2,"0")} วินาที`;
+}
+
+setInterval(updateTimer,1000);
+</script>
+
       
 
       
